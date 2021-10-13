@@ -570,6 +570,9 @@ a[id|="account-tabs-tab"][aria-selected="true"] {
   background-color: rgb(176, 97, 40);
 }
 
+.break a{
+  color:aqua;
+}
 a {
   color: #612365;
 }
