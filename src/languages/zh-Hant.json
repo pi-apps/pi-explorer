@@ -134,8 +134,7 @@
 
   "optional": "可選",
   "order.amount": "數量",
-  "order.value": "委託
-  額",
+  "order.value": "委託總額",
 
   "paging.prev": "上一頁",
   "paging.next": "下一頁",
