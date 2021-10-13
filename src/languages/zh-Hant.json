@@ -61,12 +61,12 @@
   "issued": "issued",
   "issuer": "發行方",
   "language.selector": "選擇語言",
-  "latest.ledgers": "最新的帳本頁",
+  "latest.ledgers": "最新的區塊",
   "latest.operations": "最新的操作",
   "latest.payments": "最近的收付記錄",
   "latest.txs": "最新的交易記錄",
-  "ledger": "總帳",
-  "ledgers": "總帳",
+  "ledger": "區塊",
+  "ledgers": "區塊",
   "limit": "限制",
   "logo": "徽標",
 
@@ -134,7 +134,8 @@
 
   "optional": "可選",
   "order.amount": "數量",
-  "order.value": "委託總額",
+  "order.value": "委託
+  額",
 
   "paging.prev": "上一頁",
   "paging.next": "下一頁",
@@ -147,7 +148,7 @@
   "recipient": "接受者",
   "remove": "刪除",
 
-  "search.placeHolder": "搜索總帳,交易哈希, 帳戶地址",
+  "search.placeHolder": "搜尋區塊,交易哈希, 帳戶地址",
   "sell": "賣出",
   "seller": "賣家",
   "sell.offers": "賣單",
@@ -183,7 +184,7 @@
   "trust": "授信",
   "trust.limit": "授信額度",
   "type": "類型",
-
+  "transaction.failed": "交易失敗",
   "value": "值",
   "version": "版本",
   "view.all": "查看所有",
