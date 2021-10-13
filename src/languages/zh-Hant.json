@@ -113,7 +113,7 @@
   "operation.manage.data.set.to": ":{value}",
   "operation.offer.remove": "撤銷掛單: 賣出 {sellingAsset} 買入 {buyingAsset} @ {price}",
   "operation.offer.sell": "新掛單: {amount} 賣出 {sellingAsset} 買入 {buyingAsset} @ {price}",
-  "operation.offer.update": "更新掛單: {amount} 賣出 {sellingAsset} 買入 {buyingAsset} @ {price}",
+  "operation.offer.update": "更新掛單: 賣出 {sellingAsset} {amount} 買入 {buyingAsset} {price}",
   "operation.options.set": "設置選項: [{options}]",
   "operation.options.set.clear.flags_s": "清除標誌: {value}",
   "operation.options.set.set.flags_s": "設置標誌: {value}",
