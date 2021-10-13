@@ -259,6 +259,7 @@ ul.navbar-nav .divider-vertical {
 }
 
 .break {
+  color: black;
   word-break: break-all;
   overflow-wrap: break-word;
 }
