@@ -24,14 +24,14 @@
 
   "exchanges": "Trao đổi tiền tệ",
 
-  "fed.protocol": "Nghị định thư Liên đoàn",
+  "fed.protocol": "Giao thức",
   "fed.url": "Liên kết URL",
   "fee": "Chi phí",
   "flags": "Cờ",
 
-  "hash": "Hash",
+  "hash": "Mã băm",
   "home": "Trang chủ",
-  "home.domain": "Trang chủ miền",
+  "home.domain": "Tên miền trang chủ",
 
   "inflation": "Lạm phát Điểm đến",
   "invalid.account": "Tài khoản không hợp lệ",
@@ -46,7 +46,7 @@
   "limit": "Giới hạn",
   "logo": "Logo",
 
-  "key": "Chìa khóa",
+  "key": "Khóa",
   "key.public": "Khóa công khai",
 
   "memo": "Memo",
@@ -54,7 +54,7 @@
   "memotype.id": "ID",
   "memotype.none": "Không ai",
   "memotype.return": "Trở về",
-  "memotype.text": "Bản văn",
+  "memotype.text": "Văn bản",
   "modal.trustline.anchor.label": "Mỏ neo",
   "modal.trustline.anchor.placeholder": "Tên miền hoặc địa chỉ neo",
   "modal.trustline.asset.label": "Tài sản",
