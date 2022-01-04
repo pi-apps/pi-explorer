@@ -36,14 +36,14 @@
   "effect": "التأثير",
   "effects": "التأثيرات",
 
-  "error.cant.find": "لا يمكن العثور على "\{searchStr}"\",
-  "error.nothing.found": "لا يوجد شيء في "\{path}"\",
+  "error.cant.find": "لا يمكن العثور على \"{searchStr}\"",
+  "error.nothing.found": "لا يوجد شيء في \"{path}\"",
   "error.network": "حدوث خطأ في الشبكة. تحقق من الإتصال أو تحقق من وحدة تحكم المتصفح في الرسائل.",
   "error.unknown": "عذرا، حدث خطأ ما ... ",
   "error.occurred": "حدوث خطأ: ",
   "error.insecure-network": "عنوان الأفق غير آمن!",
-  "error.insecure-network.uri": "عنوان الأفق "\{uri}"\ آمن!",
-  "error.insecure-network.reason": "ربما حاولت تغيير عنوان الأفق بـ "\http"\ بدلا من "\https"\.  Stellar يسمح فقط لشبكات الـ "\http"\ في testnets . ",
+  "error.insecure-network.uri": "عنوان الأفق \"{uri}\" آمن!",
+  "error.insecure-network.reason": "ربما حاولت تغيير عنوان الأفق بـ \"http\" بدلا من \"https\".  Stellar يسمح فقط لشبكات الـ \"http\" في testnets . ",
 
   "exchanges": "التبادلات",
 
