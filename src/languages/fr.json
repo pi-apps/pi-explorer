@@ -37,13 +37,13 @@
   "effects": "Effets",
 
   "error.cant.find": "Impossible de trouver \"{searchStr}\"",
-    "error.nothing.found": "Rien n'existe à l'adresse \"{path}\"",
-    "error.network": "Une erreur de réseau s'est produite. Vérifiez votre connexion ou consultez la console du navigateur pour des messages.",
-    "error.unknown": "Toutes nos excuses, quelque chose a mal tourné...",
-    "error.occurred": "Une erreur est survenue :",
-    "error.insecure-network": "L'adresse d'horizon n'est pas sécurisée !",
-    "error.insecure-network.uri": "L'adresse d'horizon \"{uri}\" n'est pas sécurisée !",
-    "error.insecure-network.reason": "Vous avez probablement essayé de définir une adresse d'horizon avec le préfixe \"http\" au lieu de \"https\". Stellar n'autorise \"http\" que pour les réseaux de test.",
+  "error.nothing.found": "Rien n'existe à l'adresse \"{path}\"",
+  "error.network": "Une erreur de réseau s'est produite. Vérifiez votre connexion ou consultez la console du navigateur pour des messages.",
+  "error.unknown": "Toutes nos excuses, quelque chose a mal tourné...",
+  "error.occurred": "Une erreur est survenue :",
+  "error.insecure-network": "L'adresse d'horizon n'est pas sécurisée !",
+  "error.insecure-network.uri": "L'adresse d'horizon \"{uri}\" n'est pas sécurisée !",
+  "error.insecure-network.reason": "Vous avez probablement essayé de définir une adresse d'horizon avec le préfixe \"http\" au lieu de \"https\". Stellar n'autorise \"http\" que pour les réseaux de test.",
 
   "exchanges": "Échanges",
 
