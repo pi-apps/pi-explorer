@@ -27,7 +27,7 @@
   "csv-export.fetched": "{count} সংখ্যক পর্যন্ত রেকর্ড আনা হয়েছে।",
   "csv-export.limit-exceeded": "আপনি {count} সংখ্যক এক্সপোর্ট লিমিটে পৌঁছে গেছেন। আরও রেকর্ড আনার আছে, কিন্তু ব্রাউজার মেমোরি ইস্যু প্রতিরোধের জন্য আমরা অতিরিক্ত এক্সপোর্ট সাপোর্ট করি না।",
 
-  "currency": "Currency",
+  "currency": "মূদ্রা",
 
   "data": "ডাটা",
   "details": "বিস্তারিত",
@@ -42,7 +42,7 @@
   "error.unknown": "দুঃখিত, কিছু ত্রুটি হয়েছে ... ",
   "error.occurred": "একটি ত্রুটি ঘটেছে: ",
   "error.insecure-network": "হরাইজন ঠিকানাটি সুরক্ষিত নয়!",
-  "error.insecure-network.uri": "The horizon address \"{uri}\" is insecure!",
+  "error.insecure-network.uri": "হরাইজন ঠিকানাটি \"{uri}\" সুরক্ষিত নয়!",
   "error.insecure-network.reason": " আপনি সম্ভবত হরাইজন ঠিকানার পূর্বে \"https\" এর পরিবর্তে \"http\" সেট করেছেন। স্টেলার শুধুমাত্র টেস্টনেটের জন্য \"http\" এর অনুমোদন দেয়।",
 
   "exchanges": "বিনিময়সমূহ",
@@ -84,8 +84,8 @@
   "memotype.none": "None",
   "memotype.return": "Return",
   "memotype.text": "টেক্সট",
-  "modal.trustline.anchor.label": "Anchor",
-  "modal.trustline.anchor.placeholder": "Anchor domain or address",
+  "modal.trustline.anchor.label": "অ্যাংকর",
+  "modal.trustline.anchor.placeholder": "অ্যাংকর ডোমেইন বা ঠিকানা",
   "modal.trustline.asset.label": "সম্পদ",
   "modal.trustline.asset.placeholder": "সম্পদের কোড",
   "more": "আরও",
@@ -156,7 +156,7 @@
   "sell": "বিক্রয় করুন",
   "seller": "বিক্রেতা",
   "sell.offers": "বিক্রয়ের অফারসমূহ",
-  "sequence": "Sequence",
+  "sequence": "ক্রম",
   "settings.federation": "Federated Name",
   "settings.federation.label": "নাম",
   "settings.federation.placeholder": "Federated Name",
@@ -170,7 +170,7 @@
   "source.account": "উৎস",
   "stellar.address": "স্টেলার ঠিকানা",
   "stellar": "স্টেলার",
-  "subentry.count": "Subentry Count",
+  "subentry.count": "সাব-এন্ট্রি গণনা",
 
   "thresholds": "Thresholds",
   "threshold.low": "নিম্ন",
