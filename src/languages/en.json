@@ -111,6 +111,7 @@
   "operation.account.create": "Created Account {account} with balance {balance}",
   "operation.account.merge": "Account merged into {account}",
   "operation.bump": "Bumped sequence to {sequence}",
+  "operation.claimable.claim": "{claimant} claimed balance {balanceId}",
   "operation.inflation": "Inflation run",
   "operation.manage.data.remove": "Remove Key {name}",
   "operation.manage.data.set": "Set Key {name}",

@@ -186,6 +186,9 @@ const Thresholds = ({lowThreshold, medThreshold, highThreshold}) => (
 )
 
 const effectTypeComponentMap = {
+  sequence_bumped: SequenceBumped,
+
+  // Account Effects
   account_created: AccountCreated,
   account_removed: AccountRemoved,
   account_credited: Amount,
@@ -193,27 +196,56 @@ const effectTypeComponentMap = {
   account_thresholds_updated: Thresholds,
   account_home_domain_updated: AccountHomeDomainUpdated,
   account_flags_updated: AccountFlagsUpdated,
-  sequence_bumped: SequenceBumped,
+
+  // Signer Effects
   signer_created: Signer,
   signer_removed: Signer,
   signer_updated: Signer,
+
+  // Trustline Effects
   trustline_created: Trustline,
   trustline_removed: AssetWrap,
   trustline_updated: Trustline,
   trustline_authorized: Trustline,
   trustline_deauthorized: Trustline,
+
+  // Trading Effects
   offer_created: Offer,
   offer_removed: Offer,
   offer_updated: Offer,
   trade: Trade,
+
+  // Data Effects
   data_created: Data,
   data_removed: Data,
   data_updated: Data,
+
+  // // Claimable Balance Effects
+  // claimable_balance_created: CreateMe,
+  // claimable_balance_claimed: CreateMe,
+  // claimable_balance_claimant_created: CreateMe,
+
+  // // Sponsorship Effects
+  // account_sponsorship_created: CreateMe,
+  // account_sponsorship_updated: CreateMe,
+  // account_sponsorship_removed: CreateMe,
+  // trustline_sponsorship_created: CreateMe,
+  // trustline_sponsorship_updated: CreateMe,
+  // trustline_sponsorship_removed: CreateMe,
+  // data_sponsorship_created: CreateMe,
+  // data_sponsorship_updated: CreateMe,
+  // data_sponsorship_removed: CreateMe,
+  // claimable_balance_sponsorship_created: CreateMe,
+  // claimable_balance_sponsorship_updated: CreateMe,
+  // claimable_balance_sponsorship_removed: CreateMe,
+  // signer_sponsorship_created: CreateMe,
+  // signer_sponsorship_updated: CreateMe,
+  // signer_sponsorship_removed: CreateMe,
 }
 
 const EffectDetails = ({effect, op}) => {
   const SubEffectComponent = effectTypeComponentMap[effect.type]
-  if (!SubEffectComponent) return <span>{effect.type}</span>
+  if (!SubEffectComponent) return <span>{effect.type} ALL: {JSON.stringify(effect)}</span>
   return <SubEffectComponent {...effect} op={op} />
 }
 

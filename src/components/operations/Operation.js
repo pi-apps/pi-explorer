@@ -11,6 +11,7 @@ import AccountMerge from './AccountMerge'
 import AllowTrust from './AllowTrust'
 import BumpSequence from './BumpSequence'
 import ChangeTrust from './ChangeTrust'
+import ClaimClaimableBalance from './ClaimClaimableBalance'
 import CreateAccount from './CreateAccount'
 import Inflation from './Inflation'
 import ManageData from './ManageData'
@@ -43,11 +44,21 @@ const opTypeComponentMap = {
   
   payment: Payment,
   set_options: SetOptions,
+
+  create_claimable_balance: ClaimClaimableBalance,
+  
+  // TODO: handle these operation types (#238):
+
+  // claim_claimable_balance
+  // begin_sponsoring_future_reserves
+  // end_sponsoring_future_reserves
+  // revoke_sponsorship
 }
 
 const opTypes = Object.keys(opTypeComponentMap)
 
 const SubOperation = ({op}) => {
+  opTypeComponentMap[op.type] || console.log(JSON.stringify(op, null, 2))
   const SubOpComponent = opTypeComponentMap[op.type] || Unrecognized
   return <SubOpComponent {...op} />
 }

@@ -10,13 +10,24 @@ import PropTypes from 'prop-types'
 
 import {IntlProvider, addLocaleData} from 'react-intl'
 import en from 'react-intl/locale-data/en'
-import vi from 'react-intl/locale-data/vi'
+import fr from 'react-intl/locale-data/fr'
+import id from 'react-intl/locale-data/id'
+import hi from 'react-intl/locale-data/hi'
+import ja from 'react-intl/locale-data/ja'
 import ru from 'react-intl/locale-data/ru'
+import ur from 'react-intl/locale-data/ur'
+import vi from 'react-intl/locale-data/vi'
 import zh from 'react-intl/locale-data/zh'
 import enMessages from './languages/en'
+import frMessages from './languages/fr'
+import hiMessages from './languages/hi'
+import idMessages from './languages/id'
+import jaMessages from './languages/ja'
 import ruMessages from './languages/ru'
+import urMessages from './languages/ur'
 import viMessages from './languages/vi'
-import zhMessages from './languages/zh'
+import zhHansMessages from './languages/zh-Hans.json'
+import zhHantMessages from './languages/zh-Hant.json'
 
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
@@ -43,7 +54,17 @@ const HOME_TESTNET = 'https://testnet.steexp.com'
 
 const storage = storageInit()
 
-addLocaleData([...en, ...ru, ...vi, ...zh])
+addLocaleData([
+  ...en,
+  ...fr,
+  ...hi,
+  ...id,
+  ...ja,
+  ...ru,
+  ...ur,
+  ...vi,
+  ...zh,
+])
 
 const initialLanguage =
   storage.getItem('language') || navigator.language || 'en'
@@ -56,12 +77,24 @@ const networkAddress =
 
 const getMessages = locale => {
   switch (locale) {
-    case 'vi':
-      return viMessages
+    case 'fr':
+      return frMessages
+    case 'hi':
+      return hiMessages
+    case 'id':
+      return idMessages
+    case 'ja':
+      return jaMessages
     case 'ru':
       return ruMessages
-    case 'zh':
-      return zhMessages
+    case 'ur':
+      return urMessages
+    case 'vi':
+      return viMessages
+    case 'zh-Hans':
+      return zhHansMessages
+    case 'zh-Hant':
+      return zhHantMessages
     default:
       return enMessages
   }
