@@ -1,0 +1,40 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://api.testnet.minepi.com/ledgers/8544187"
+    },
+    "transactions": {
+      "href": "https://api.testnet.minepi.com/ledgers/8544187/transactions{?cursor,limit,order}",
+      "templated": true
+    },
+    "operations": {
+      "href": "https://api.testnet.minepi.com/ledgers/8544187/operations{?cursor,limit,order}",
+      "templated": true
+    },
+    "payments": {
+      "href": "https://api.testnet.minepi.com/ledgers/8544187/payments{?cursor,limit,order}",
+      "templated": true
+    },
+    "effects": {
+      "href": "https://api.testnet.minepi.com/ledgers/8544187/effects{?cursor,limit,order}",
+      "templated": true
+    }
+  },
+  "id": "1e7d2fa13eefa834e0dd9bd7e37fd952e9901d3ff85a4952ab48e623d4d08623",
+  "paging_token": "36697003735908352",
+  "hash": "1e7d2fa13eefa834e0dd9bd7e37fd952e9901d3ff85a4952ab48e623d4d08623",
+  "prev_hash": "d0e6b86a118accac79a403870006cfc2fb8dd9f84727a498439ce3c429869aa0",
+  "sequence": 8544187,
+  "successful_transaction_count": 19,
+  "failed_transaction_count": 0,
+  "operation_count": 34,
+  "tx_set_operation_count": 34,
+  "closed_at": "2022-08-05T20:47:47Z",
+  "total_coins": "100000000000.0000000",
+  "fee_pool": "1039627.1418620",
+  "base_fee_in_stroops": 100000,
+  "base_reserve_in_stroops": 100000000,
+  "max_tx_set_size": 1000,
+  "protocol_version": 15,
+  "header_xdr": "AAAAD9DmuGoRisyseaQDhwAGz8L7jdn4RyekmEOc48Qphpqgo85WSC9iY45NCulLiUH20F54+KdoFy+N/DdhznnunVUAAAAAYu2B8wAAAAAAAAABAAAAAOKM5F17c+uFMw5v3Vr8bDSuY7cKqhjhpRjlyrvPdDaDAAAAQLeZaghEQSlvN1l+LSWX5wrL9ToBvLI6wZ2TGUKkA6EKtvECnFKyBdP4PKePG8TioR7fXAt3gr+eGOZbP78fyQ4QXcWnDIIZY+Up6YCH9EKXh6PHPrGNfvLDJ6GdrHB8CYf5e1ZTxWDve2XIjgj9WXArurQ+GiaC2RwbMnAexfJ5AIJfuw3gtrOnZAAAAAAJdJIQnPwAAAAAAAAAAAAAEnsAAYagBfXhAAAAA+jwOCdyJOUG/csuXS8SGHnsHaMtk1Kk5SYyFS73pgrn3Xze8w5o/Qmnir+m81H5lfhb+2qWmLH0C5gcoFVFiIDdbyGfT3kh1+ANgvIFn2nQZ2nFytRpT5pMD5SsFokn+QeKP7vL3AhF3R9mKKHwJ82D73OqImkqbVR0SIPbp0k/kwAAAAA="
+}
