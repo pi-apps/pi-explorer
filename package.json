@@ -1,7 +1,7 @@
 {
   "name": "stellarexplorer",
   "description": "Ledger explorer for the Stellar network",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "license": "Apache-2.0",
   "author": "Chris Hatch <hatch@tuta.io>",
   "homepage": "https://steexp.com",

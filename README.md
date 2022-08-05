@@ -1,6 +1,6 @@
 # Stellar Explorer
 
-[![Build Status](https://travis-ci.org/chatch/stellarexplorer.svg?branch=master)](https://travis-ci.org/chatch/stellarexplorer)
+[![Build Status](https://travis-ci.com/chatch/stellarexplorer.svg?branch=master)](https://travis-ci.com/chatch/stellarexplorer)
 
 A ledger explorer for [Stellar](https://stellar.org).
 
