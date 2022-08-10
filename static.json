@@ -1,5 +1,3 @@
-{
-  "root": "build/",
   "routes": {
     "/**": "index.html"
   },
@@ -9,4 +7,3 @@
       "Content-Type": "application/opensearchdescription+xml"
     }
   }
-}

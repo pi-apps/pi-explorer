@@ -1,42 +1,26 @@
-import React from 'react'
+mport React from 'react'
 import PropTypes from 'prop-types'
 import {compose} from 'recompose'
 import Table from 'react-bootstrap/lib/Table'
 import {FormattedMessage} from 'react-intl'
-
 import mapKeys from 'lodash/mapKeys'
 import camelCase from 'lodash/camelCase'
-
 import {withDataFetchingContainer} from './shared/DataFetchingContainer'
 import {withDataFetchingAllContainer} from './shared/DataFetchingAllContainer'
 import {withPaging} from './shared/Paging'
 import {withSpinner} from './shared/Spinner'
 import Effect from './Effect'
 import CSVExport from './shared/CSVExport'
-
 const EffectTable = ({
   parentRenderTimestamp,
   records,
-  server,
-  showAccount = true,
-  account,
-}) => (
-  <div>
-    <Table
-      id="effect-table"
-      className="table-striped table-hover table-condensed"
-    >
-      <thead>
-        <tr>
-          {showAccount && (
-            <th>
-              <FormattedMessage id="account" />
+	@@ -34,9 +31,9 @@ const EffectTable = ({
             </th>
           )}
           <th>
-            <FormattedMessage id="type" />
+                        <FormattedMessage id="type" />
           </th>
-          <th>
+         <th>
             <FormattedMessage id="details" />
           </th>
           <th>
@@ -67,34 +51,26 @@ const EffectTable = ({
     </div>
   </div>
 )
-
 EffectTable.propTypes = {
   parentRenderTimestamp: PropTypes.number,
   records: PropTypes.array.isRequired,
   server: PropTypes.object.isRequired,
   showAccount: PropTypes.bool,
 }
-
 const rspRecToPropsRec = record => mapKeys(record, (v, k) => camelCase(k))
-
 const fetchRecords = ({account, limit, op, server, tx}) => {
   const builder = server.effects()
   if (account) builder.forAccount(account)
-  if (op) builder.forOperation(op)
-  if (tx) builder.forTransaction(tx)
-  builder.limit(limit)
+	@@ -86,7 +81,6 @@ const fetchRecords = ({account, limit, op, server, tx}) => {
   builder.order('desc')
   return builder.call()
 }
-
 const enhance = compose(
   withPaging(),
   withDataFetchingContainer(fetchRecords, rspRecToPropsRec),
   withSpinner()
 )
-
 const ExportToCSVComponent = withDataFetchingAllContainer(fetchRecords)(
   CSVExport
 )
-
 export default enhance(EffectTable)

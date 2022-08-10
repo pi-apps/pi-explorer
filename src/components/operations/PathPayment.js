@@ -2,7 +2,6 @@ import React from 'react'
 import Payment from './Payment'
 import Asset from '../shared/Asset'
 import {FormattedMessage} from 'react-intl'
-
 const PathPayment = props => {
   const sourceAsset = (
     <Asset
@@ -23,5 +22,4 @@ const PathPayment = props => {
     </Payment>
   )
 }
-
 export default PathPayment
