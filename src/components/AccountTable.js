@@ -27,7 +27,7 @@ class AccountRow extends React.Component {
           {this.props.value}
         </td>
         <td>
-          <Link to={`/ledger/${this.props.ledger}`}>
+          <Link to={`/block/${this.props.ledger}`}>
             {this.props.ledger}
           </Link>
         </td>

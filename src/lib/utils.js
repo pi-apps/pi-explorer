@@ -68,7 +68,7 @@ const formatAmount = amount => {
   return new BigNumber(amount).toString()
 }
 
-const setTitle = subTitle => (document.title = `Stellar Explorer | ${subTitle}`)
+const setTitle = subTitle => (document.title = `Pi Blockexplorer | ${subTitle}`)
 
 export {
   assetKeyToIssuer,

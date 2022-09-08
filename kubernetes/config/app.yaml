@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blockexplorer-app-deployment
+  annotations:
+    app.gitlab.com/app: "__CI_PROJECT_PATH_SLUG__"
+    app.gitlab.com/env: "__CI_ENVIRONMENT_SLUG__"
+  labels:
+    app: blockexplorer-app
+spec:
+  selector:
+    matchLabels:
+      app: blockexplorer-app
+  template:
+    metadata:
+      annotations:
+        app.gitlab.com/app: "__CI_PROJECT_PATH_SLUG__"
+        app.gitlab.com/env: "__CI_ENVIRONMENT_SLUG__"
+      labels:
+        app: blockexplorer-app
+    spec:
+      containers:
+        - name: blockexplorer-app
+          image: __APP_IMAGE_TAG__
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: __APP_POD_CPU_LIMIT__
+              ephemeral-storage: __APP_POD_EPHEMERAL_STORAGE_LIMIT__
+              memory: __APP_POD_MEMORY_LIMIT__
+      imagePullSecrets:
+        - name: gitlab-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blockexplorer-app-service
+spec:
+  selector:
+    app: blockexplorer-app
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: blockexplorer-app-deployment-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: blockexplorer-app-deployment
+  minReplicas: __APP_MIN_REPLICA__
+  maxReplicas: __APP_MAX_REPLICA__
+  metrics:
+    - resource:
+        name: memory
+        targetAverageUtilization: 80
+      type: Resource
+    - resource:
+        name: cpu
+        targetAverageUtilization: 80
+      type: Resource

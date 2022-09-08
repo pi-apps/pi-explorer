@@ -3,7 +3,7 @@
 exports[`render negative change in rate 1`] = `
 Array [
   <span>
-    XLM/USD: 
+    Test-π/USD: 
     0.025
      
     <span
@@ -22,7 +22,7 @@ Array [
 exports[`render positive change in rate 1`] = `
 Array [
   <span>
-    XLM/USD: 
+    Test-π/USD: 
     0.020
      
     <span

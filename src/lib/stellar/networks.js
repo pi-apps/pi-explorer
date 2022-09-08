@@ -1,6 +1,6 @@
 const networks = {
   public: 'public',
-  test: 'test',
+  test: 'testnet',
   local: 'local',
 }
 

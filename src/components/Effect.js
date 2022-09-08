@@ -265,7 +265,7 @@ class Effect extends React.Component {
         <td>
           <TimeSynchronisedFormattedRelative
             initialNow={this.props.parentRenderTimestamp}
-            value={effect.createdAt}
+            time={effect.createdAt}
           />
         </td>
         <td>

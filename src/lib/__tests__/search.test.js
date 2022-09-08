@@ -22,9 +22,9 @@ describe('searchStrToPath', () => {
     )
   })
 
-  it('returns /ledger for numbers', () => {
-    expect(searchStrToPath('3')).toEqual('/ledger/3')
-    expect(searchStrToPath('4567890')).toEqual('/ledger/4567890')
+  it('returns /block for numbers', () => {
+    expect(searchStrToPath('3')).toEqual('/block/3')
+    expect(searchStrToPath('4567890')).toEqual('/block/4567890')
   })
 
   it('returns /tx for transaction hashes', () => {

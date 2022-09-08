@@ -54,7 +54,7 @@ const SubOperation = ({op}) => {
   return <SubOpComponent {...op} />
 }
 
-const Operation = ({compact, op, opURLFn, parentRenderTimestamp}) => {
+const Operation = ({compact, op, opURLFn, parentRenderTimestamp, is_transaction}) => {
   let opAccount
   
   if (op.fromMuxed) {
@@ -79,31 +79,35 @@ const Operation = ({compact, op, opURLFn, parentRenderTimestamp}) => {
       <td className="account-badge">{acc}</td>
       <td>
         <SubOperation op={op} />
+
       </td>
       {compact === false && (
-        <td>
+        <td class = "block-column">
           <TransactionHash hash={op.transactionHash} compact={true} />
         </td>
       )}
       {compact === false && (
-        <td>
+        <td class = "block-column">
           <OperationType
             type={op.type}
             compact={false}
           />
         </td>
       )}
-      <td>
+      <td > 
         <span title={op.time}>
           <TimeSynchronisedFormattedRelative
-            initialNow={parentRenderTimestamp}
-            value={op.time}
+            // initialNow={parentRenderTimestamp}
+            time={op.time}
+            hash={op.transactionHash}
           />
         </span>
       </td>
-      <td>
-        <JSONButton url={opURLFn(op.id)} />
-      </td>
+      {is_transaction === true &&(
+        <td class>
+          <JSONButton url={opURLFn(op.id)} />
+        </td>
+      )}
     </tr>
   )
 }
@@ -123,6 +127,7 @@ Operation.propTypes = {
   }).isRequired,
   opURLFn: PropTypes.func.isRequired,
   parentRenderTimestamp: PropTypes.number,
+  is_transaction: PropTypes.bool,
 }
 
 export {Operation as default, opTypes}

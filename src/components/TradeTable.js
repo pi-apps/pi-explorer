@@ -74,7 +74,7 @@ const Trade = ({account, singleAccountView, trade, parentRenderTimestamp}) => {
         <span title={trade.time}>
           <TimeSynchronisedFormattedRelative
             initialNow={parentRenderTimestamp}
-            value={trade.time}
+            time={trade.time}
           />
         </span>
       </td>

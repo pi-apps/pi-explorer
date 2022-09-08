@@ -59,7 +59,7 @@ class Home extends React.Component {
               header={panelHeader(
                 formatMessage({id: 'latest.ledgers'}),
                 viewAllStr,
-                '/ledgers'
+                '/blocks'
               )}
             >
               <LedgerTable fill limit={10} compact />

@@ -45,7 +45,7 @@ const searchStrToPath = searchStr => {
   } else if (isTxHash(str)) {
     return `/tx/${str}`
   } else if (!isNaN(toNumber(str))) {
-    return `/ledger/${toNumber(str)}`
+    return `/block/${toNumber(str)}`
   } else if (isSecretKey(str)) {
     const kp = sdk.Keypair.fromSecret(str)
     return `/account/${kp.publicKey()}`

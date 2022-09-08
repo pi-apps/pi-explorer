@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# All the variables ($VARIABLE) are Gitlab pipeline variables
+# They are set at different places:
+#   - $CI and $GITLAB ones are set by Gitlab
+#   - $IMAGE_TAG is set in the gitlab-ci.yml file
+
+# Creates a kubernetes secret file
+kubectl create secret docker-registry gitlab-registry \
+  --docker-server="$CI_REGISTRY" \
+  --docker-username="$CI_DEPLOY_USER" \
+  --docker-password="$CI_DEPLOY_PASSWORD" \
+  --docker-email="$GITLAB_USER_EMAIL" \
+  -o yaml --dry-run=client | kubectl apply -f -
+
+
+# Replaces variables in the configuration file by their actual value
+# Details: sed -ri "s|xxx|yyy|g" file
+#   - 'xxx' is what we want to replace
+#   - 'yyy' is what we want to put in place of 'xxx'
+#   - 'file' is the file in which we want to make this replacement
+sed -ri \
+  -e "s|__CI_PROJECT_PATH_SLUG__|$CI_PROJECT_PATH_SLUG|g" \
+  -e "s|__CI_ENVIRONMENT_SLUG__|$CI_ENVIRONMENT_SLUG|g" \
+  -e "s|__APP_IMAGE_TAG__|$APP_IMAGE_TAG|g" \
+  -e "s|__APP_POD_CPU_LIMIT__|$APP_POD_CPU_LIMIT|g" \
+  -e "s|__APP_POD_EPHEMERAL_STORAGE_LIMIT__|$APP_POD_EPHEMERAL_STORAGE_LIMIT|g" \
+  -e "s|__APP_POD_MEMORY_LIMIT__|$APP_POD_MEMORY_LIMIT|g" \
+  -e "s|__APP_MIN_REPLICA__|$APP_MIN_REPLICA|g" \
+  -e "s|__APP_MAX_REPLICA__|$APP_MAX_REPLICA|g" \
+  ./kubernetes/config/app.yaml
+
+
+# Applies the configuration file to deploy the app
+kubectl apply -f ./kubernetes/config/app.yaml

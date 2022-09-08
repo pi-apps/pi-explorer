@@ -64,7 +64,6 @@ const OperationTable = props => (
           <th>
             <FormattedMessage id="time" />
           </th>
-          <th />
         </tr>
       </thead>
       <tbody>
@@ -75,6 +74,7 @@ const OperationTable = props => (
             op={op}
             opURLFn={props.server.opURL}
             parentRenderTimestamp={props.parentRenderTimestamp}
+            is_transaction={props.is_transaction}
           />
         ))}
       </tbody>
@@ -92,6 +92,7 @@ OperationTable.propTypes = {
   parentRenderTimestamp: PropTypes.number,
   records: PropTypes.array.isRequired,
   server: PropTypes.object.isRequired,
+  is_transaction: PropTypes.bool,
 }
 
 const rspRecToPropsRec = record => {

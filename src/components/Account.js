@@ -64,7 +64,7 @@ const NameValueTable = ({data, decodeValue = false}) => {
 }
 
 const balanceRow = bal => (
-  <tr key={bal.asset_code ? `${bal.asset_code}-${bal.asset_issuer}` : 'XLM'}>
+  <tr key={bal.asset_code ? `${bal.asset_code}-${bal.asset_issuer}` : 'Test-π'}>
     <td>
       <Asset
         type={bal.asset_type}
@@ -208,7 +208,7 @@ const AccountSummaryPanel = ({
                 <FormattedMessage id="key.public" />:
               </Col>
               <Col md={9}>
-                <span className="break" style={{color: 'white'}}>{a.id}</span>
+                <span className="break" style={{color: '#333'}}>{a.id}</span>
                 <ClipboardCopy text={a.id} />
               </Col>
             </Row>

@@ -24,7 +24,7 @@ const HelpModal = props => (
     <Modal.Body style={{color: '#96a2b4'}}>
       <h4>Search By:</h4>
       <br />
-      <div>
+      {/* <div>
         <h5>Stellar Address</h5>
         Also called a{' '}
         <a
@@ -38,7 +38,7 @@ const HelpModal = props => (
           src={`${process.env.PUBLIC_URL}/search/search_stellar_address.png`}
           alt="search by ledger"
         />
-      </div>
+      </div> */}
       <div>
         <h5>Account ID</h5>
         Also called a Public Key or Public Address
@@ -48,7 +48,7 @@ const HelpModal = props => (
           width="100%"
         />
       </div>
-      <div>
+      {/* <div>
         <h5>Anchor Name</h5>
         <div>
           as listed on the{' '}
@@ -86,7 +86,7 @@ const HelpModal = props => (
           src={`${process.env.PUBLIC_URL}/search/search_asset.png`}
           alt="search by asset code"
         />
-      </div>
+      </div> */}
       <div>
         <h5>Transaction Hash</h5>
         <img
@@ -105,7 +105,7 @@ const HelpModal = props => (
       <hr />
       <h4>OpenSearch:</h4>
       <div>
-        Stellar Explorer supports{' '}
+        Pi Blockexplorer supports{' '}
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -115,7 +115,7 @@ const HelpModal = props => (
         </a>
         . This allows you to search directly from your browser search box or
         search bar. You should see something like the following when you
-        navigate to Stellar Explorer then open the search box. Install it from
+        navigate to Pi Blockexplorer then open the search box. Install it from
         there:
         <br />
         <img
