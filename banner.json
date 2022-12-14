@@ -2,3 +2,144 @@
   "message": "<span style=\"font-size: larger;\">\uD83D\uDCA1</span>&nbsp;&nbsp;<span style=\"color: white; font-weight: bold;\">Testnet</span> will be reset on February 27th, 2019. See <a href=\"https://groups.google.com/d/topic/stellar-dev/_6C14ohXr7s/discussion\" target=\"_blank\">here</a> for more information.",
   "expiry": 1553644800000
 }
+
+
+{
+
+  "_links": {
+
+    "self": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK"
+
+    },
+
+    "transactions": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/transactions{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "operations": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/operations{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "payments": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/payments{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "effects": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/effects{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "offers": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/offers{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "trades": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/trades{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "data": {
+
+      "href": "https://api.testnet.minepi.com/accounts/GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK/data/{key}",
+
+      "templated": true
+
+    }
+
+  },
+
+  "id": "GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK",
+
+  "account_id": "GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK",
+
+  "sequence": "31675624326203476",
+
+  "subentry_count": 0,
+
+  "last_modified_ledger": 10345491,
+
+  "last_modified_time": "2022-12-14T03:41:17Z",
+
+  "thresholds": {
+
+    "low_threshold": 0,
+
+    "med_threshold": 0,
+
+    "high_threshold": 0
+
+  },
+
+  "flags": {
+
+    "auth_required": false,
+
+    "auth_revocable": false,
+
+    "auth_immutable": false
+
+  },
+
+  "balances": [
+
+    {
+
+      "balance": "2583.7792309",
+
+      "buying_liabilities": "0.0000000",
+
+      "selling_liabilities": "0.0000000",
+
+      "asset_type": "native"
+
+    }
+
+  ],
+
+  "signers": [
+
+    {
+
+      "weight": 1,
+
+      "key": "GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK",
+
+      "type": "ed25519_public_key"
+
+    }
+
+  ],
+
+  "data": {},
+
+  "num_sponsoring": 0,
+
+  "num_sponsored": 0,
+
+  "paging_token": "GDWFYLF5SYK2HQYFFUAFT67IDNJZBT34UMNYAXKFDLRVZJW34AA3OWNK"
+
+}
