@@ -1,0 +1,81 @@
+
+{
+
+  "_links": {
+
+    "self": {
+
+      "href": "https://api.testnet.minepi.com/ledgers/10345763"
+
+    },
+
+    "transactions": {
+
+      "href": "https://api.testnet.minepi.com/ledgers/10345763/transactions{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "operations": {
+
+      "href": "https://api.testnet.minepi.com/ledgers/10345763/operations{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "payments": {
+
+      "href": "https://api.testnet.minepi.com/ledgers/10345763/payments{?cursor,limit,order}",
+
+      "templated": true
+
+    },
+
+    "effects": {
+
+      "href": "https://api.testnet.minepi.com/ledgers/10345763/effects{?cursor,limit,order}",
+
+      "templated": true
+
+    }
+
+  },
+
+  "id": "f09bb5456fe74854656c664a27936c442cb9f9d1e4d90e0d6072fc268d16654f",
+
+  "paging_token": "44434713737166848",
+
+  "hash": "f09bb5456fe74854656c664a27936c442cb9f9d1e4d90e0d6072fc268d16654f",
+
+  "prev_hash": "77a3a7502c1abcbef5dc956d9af7025fcdf07fb4ad5efa55ec2b1ab73893a54c",
+
+  "sequence": 10345763,
+
+  "successful_transaction_count": 16,
+
+  "failed_transaction_count": 0,
+
+  "operation_count": 16,
+
+  "tx_set_operation_count": 16,
+
+  "closed_at": "2022-12-14T04:10:19Z",
+
+  "total_coins": "100000000000.0000000",
+
+  "fee_pool": "1474824.2818620",
+
+  "base_fee_in_stroops": 100000,
+
+  "base_reserve_in_stroops": 100000000,
+
+  "max_tx_set_size": 1000,
+
+  "protocol_version": 15,
+
+  "header_xdr": "AAAAD3ejp1AsGry+9dyVbZr3Al/N8H+0rV76VewrGrc4k6VM+W100fIeyyKwwBZUFyGiv2Es1Y50rtK7Vdj+ZwEXV5oAAAAAY5lMqwAAAAAAAAABAAAAABSPlbeyEnVXglFlTyhtLN+AUc/VkKX1BZOeSksK5ja7AAAAQFRR2nCc7H6c/MvLml9oailurCqMgVLy7Z3Ztm6geslik+dAtZ0EBR2041HiDUj/D14ea1mt8+y3GwqrVefgGQCvIrHXrTj0UYTB57ATUy54oMNZHbw5aWvYCy94yxE7nbZlcsK8hT5lOHd6dO1sX2ED8p2rKckM+6JVNINRIicvAJ3dIw3gtrOnZAAAAAANadfGNjwAAAAAAAAAAAACAO4AAYagBfXhAAAAA+h/iivfKCEG4PGS3kQhyrD9E8EtZlQn0U9MIhNY9Beob8XeUnuHk7SwWV6Je/FORE9Txhx23sfVam86kHivgZG0+WGHKVyH+R7JLbgqEYDOugedb+ofkXDJt4dp5wGgIwSXTsaaqNFxXDAwamejRfscMIZOAt7pG5Fb+G2bktpGnAAAAAA="
+
+}
+
