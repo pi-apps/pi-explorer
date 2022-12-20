@@ -1,0 +1,21 @@
+[submodule "usr/module/uclient"]
+	path = usr/module/uclient
+	url = https://github.com/pi-module/uclient
+[submodule "usr/module/saml"]
+	path = usr/module/saml
+	url = https://github.com/pi-module/saml
+[submodule "lib/vendor/simplesamlphp"]
+	path = lib/vendor/simplesamlphp
+	url = https://github.com/pi-vendor/simplesamlphp
+[submodule "usr/module/sitemap"]
+	path = usr/module/sitemap
+	url = https://github.com/pi-module/sitemap
+[submodule "usr/module/message"]
+	path = usr/module/message
+	url = https://github.com/pi-module/message
+[submodule "usr/module/comment"]
+	path = usr/module/comment
+	url = https://github.com/pi-module/comment
+[submodule "usr/module/search"]
+	path = usr/module/search
+	url = https://github.com/pi-module/search

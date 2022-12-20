@@ -1,20 +1,51 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
-# dependencies
+/.idea/
+/www/upload/
+/www/asset/
+/var/cache/
+/var/log/
+!/var/log/index.html
 /node_modules
 
-# testing
-/coverage
+/usr/theme/*
+!/usr/theme/default/
+!/usr/theme/pi/
+/usr/theme/guil
 
-# production
-/build
+/*.php
+/www/sitmap.xml
+/www/apple-app-site-association
 
-# misc
-.DS_Store
-.env
-.vscode
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-yarn.lock
+/var/config/custom/*.*
 
+
+/usr/module/*
+!/usr/module/article
+!/usr/module/comment
+!/usr/module/demo
+!/usr/module/message
+!/usr/module/saml
+!/usr/module/search
+!/usr/module/sitemap
+!/usr/module/page
+!/usr/module/system
+!/usr/module/tag
+!/usr/module/user
+!/usr/module/widget
+!/usr/module/uclient
+
+
+var/config/module.meta.php
+www/robots-https.txt
+www/robots.txt
+www/sitemap.xml
+www/pi.txt
+
+usr/custom/module/portfolio/
+www/git.php
+www/assets.php
+assets.php
+git.php
+/.htaccess
+/.htpasswd
+
+/usr/custom/module/user/config/form.register.php
