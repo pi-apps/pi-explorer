@@ -23,6 +23,7 @@ import it from 'react-intl/locale-data/it'
 import ne from 'react-intl/locale-data/ne'
 import pt from 'react-intl/locale-data/pt'
 
+import ar from 'react-intl/locale-data/ar'
 
 
 
@@ -40,7 +41,7 @@ import haMessages from './languages/hau.json'
 import itMessages from './languages/it'
 import neMessages from './languages/ne'
 import ptMessages from './languages/pt'
-
+import arMessages from './languages/ar'
 
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
@@ -81,8 +82,9 @@ addLocaleData([
   ...it,
   ...ne,
   ...pt,
+  ...ar,
 ])
-const locales = ['en', 'fr', 'hi', 'id', 'ja', 'ru', 'ur', 'vi', 'zh-Hans', 'zh-Hant', 'ha', 'it', 'ne', 'pt']
+const locales = ['en', 'fr', 'hi', 'id', 'ja', 'ru', 'ur', 'vi', 'zh-Hans', 'zh-Hant', 'ha', 'it', 'ne', 'pt', 'ar']
 let initialLanguage =
   storage.getItem('language') || navigator.language || 'en'
 if(!locales.includes(initialLanguage) ){
@@ -97,6 +99,8 @@ const networkAddress =
 
 const getMessages = locale => {
   switch (locale) {
+      case 'ar':
+      return arMessages
     case 'fr':
       return frMessages
     case 'hi':
@@ -125,6 +129,8 @@ const getMessages = locale => {
       return ptMessages
     default:
       return enMessages
+
+
   }
 }
 
