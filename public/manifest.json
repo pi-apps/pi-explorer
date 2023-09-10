@@ -1,6 +1,6 @@
 {
-  "short_name": "steexp",
-  "name": "Stellar Explorer",
+  "short_name": "Blockexplorer",
+  "name": "Blockexplorer",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

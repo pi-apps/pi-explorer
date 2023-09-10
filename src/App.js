@@ -18,6 +18,14 @@ import ru from 'react-intl/locale-data/ru'
 import ur from 'react-intl/locale-data/ur'
 import vi from 'react-intl/locale-data/vi'
 import zh from 'react-intl/locale-data/zh'
+import ha from 'react-intl/locale-data/ha'
+import it from 'react-intl/locale-data/it'
+import ne from 'react-intl/locale-data/ne'
+import pt from 'react-intl/locale-data/pt'
+
+
+
+
 import enMessages from './languages/en'
 import frMessages from './languages/fr'
 import hiMessages from './languages/hi'
@@ -28,6 +36,11 @@ import urMessages from './languages/ur'
 import viMessages from './languages/vi'
 import zhHansMessages from './languages/zh-Hans.json'
 import zhHantMessages from './languages/zh-Hant.json'
+import haMessages from './languages/hau.json'
+import itMessages from './languages/it'
+import neMessages from './languages/ne'
+import ptMessages from './languages/pt'
+
 
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
@@ -64,10 +77,17 @@ addLocaleData([
   ...ur,
   ...vi,
   ...zh,
+  ...ha,
+  ...it,
+  ...ne,
+  ...pt,
 ])
-
-const initialLanguage =
+const locales = ['en', 'fr', 'hi', 'id', 'ja', 'ru', 'ur', 'vi', 'zh-Hans', 'zh-Hant', 'ha', 'it', 'ne', 'pt']
+let initialLanguage =
   storage.getItem('language') || navigator.language || 'en'
+if(!locales.includes(initialLanguage) ){
+  initialLanguage = 'en'
+}
 
 // Derive network type from the hostname.
 // Network settings determine which horizon instance to pull data from.
@@ -95,6 +115,14 @@ const getMessages = locale => {
       return zhHansMessages
     case 'zh-Hant':
       return zhHantMessages
+    case 'ha':
+      return haMessages
+    case 'it':
+      return itMessages
+    case 'ne':
+      return neMessages
+    case 'pt':
+      return ptMessages
     default:
       return enMessages
   }
@@ -175,7 +203,7 @@ class App extends Component {
         locale={this.state.language}
         messages={getMessages(this.state.language)}
       >
-        <Router basename="">
+        <Router basename="/blockexplorer">
           <div className="App">
             <Header
               networkAddress={this.state.networkAddress}

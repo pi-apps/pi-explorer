@@ -208,7 +208,7 @@ const AccountSummaryPanel = ({
                 <FormattedMessage id="key.public" />:
               </Col>
               <Col md={9}>
-                <span className="break" style={{color: 'white'}}>{a.id}</span>
+                <span className="break" style={{color: '#333'}}>{a.id}</span>
                 <ClipboardCopy text={a.id} />
               </Col>
             </Row>

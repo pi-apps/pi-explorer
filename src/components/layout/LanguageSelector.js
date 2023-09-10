@@ -59,6 +59,18 @@ const LanguageSelector = ({
       <MenuItem lang="id" onClick={switcher}>
         Bahasa Indonesia
       </MenuItem>
+      <MenuItem lang="ha" onClick={switcher}>
+        Hausa
+      </MenuItem>
+      <MenuItem lang="it" onClick={switcher}>
+        Italiana
+      </MenuItem>
+      <MenuItem lang="ne" onClick={switcher}>
+        नेपाली
+      </MenuItem>
+      <MenuItem lang="pt" onClick={switcher}>
+        Português
+      </MenuItem>
       <MenuItem
         onClick={onClickTranslateHelp}
         style={{borderTop: '1px solid black'}}
