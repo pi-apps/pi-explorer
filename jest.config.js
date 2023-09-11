@@ -1,5 +1,4 @@
-module.exports = {
-  collectCoverageFrom: ['src/**/*.{js,jsx}'],
+module.exports = { collectCoverageFrom: ['src/**/*.{js,jsx}'],
   setupFiles: [
     '<rootDir>/config/polyfills.js',
     '<rootDir>/config/animationShim.js',
