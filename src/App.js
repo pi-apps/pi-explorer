@@ -22,6 +22,7 @@ import ha from 'react-intl/locale-data/ha'
 import it from 'react-intl/locale-data/it'
 import ne from 'react-intl/locale-data/ne'
 import pt from 'react-intl/locale-data/pt'
+import bn from 'react-intl/locale-data/bn'
 
 
 
@@ -40,6 +41,7 @@ import haMessages from './languages/hau.json'
 import itMessages from './languages/it'
 import neMessages from './languages/ne'
 import ptMessages from './languages/pt'
+import bnMessages from './languages/bn'
 
 
 import Header from './components/layout/Header'
@@ -81,8 +83,9 @@ addLocaleData([
   ...it,
   ...ne,
   ...pt,
+  ...bn,
 ])
-const locales = ['en', 'fr', 'hi', 'id', 'ja', 'ru', 'ur', 'vi', 'zh-Hans', 'zh-Hant', 'ha', 'it', 'ne', 'pt']
+const locales = ['en', 'fr', 'hi', 'id', 'ja', 'ru', 'ur', 'vi', 'zh-Hans', 'zh-Hant', 'ha', 'it', 'ne', 'pt', 'bn']
 let initialLanguage =
   storage.getItem('language') || navigator.language || 'en'
 if(!locales.includes(initialLanguage) ){
@@ -123,6 +126,8 @@ const getMessages = locale => {
       return neMessages
     case 'pt':
       return ptMessages
+    case 'bn':
+      return bnMessages
     default:
       return enMessages
   }
