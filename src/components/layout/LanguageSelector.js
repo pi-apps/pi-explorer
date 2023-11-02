@@ -71,6 +71,9 @@ const LanguageSelector = ({
       <MenuItem lang="pt" onClick={switcher}>
         Português
       </MenuItem>
+      <MenuItem lang="bn" onClick={switcher}>
+        বাংলা
+      </MenuItem>
       <MenuItem
         onClick={onClickTranslateHelp}
         style={{borderTop: '1px solid black'}}
