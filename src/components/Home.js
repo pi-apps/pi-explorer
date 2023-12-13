@@ -35,7 +35,7 @@ class Home extends React.Component {
                 '/operations'
               )}
             >
-              <OperationTable compact fill limit={25} refresh noCSVExport={true} />
+              <OperationTable compact fill limit={25} noCSVExport={true} />
             </Panel>
           </Col>
           <Col md={4}>
@@ -50,7 +50,6 @@ class Home extends React.Component {
                 compact
                 fill
                 limit={10}
-                refresh
                 showLedger
                 showSource={false}
                 noCSVExport={true}
@@ -60,10 +59,10 @@ class Home extends React.Component {
               header={panelHeader(
                 formatMessage({id: 'latest.ledgers'}),
                 viewAllStr,
-                '/ledgers'
+                '/blocks'
               )}
             >
-              <LedgerTable fill limit={10} refresh compact />
+              <LedgerTable fill limit={10} compact />
             </Panel>
           </Col>
         </Row>

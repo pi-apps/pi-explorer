@@ -106,7 +106,7 @@ class Ledger extends React.Component {
                   </DetailRow>
                   <DetailRow label="prevHash">
                     <span title={prevHash}>
-                      <Link to={`/ledger/${prevSeq}`}>
+                      <Link to={`/block/${prevSeq}`}>
                         {ledgerHash(prevHash)}
                       </Link>
                     </span>
@@ -116,7 +116,7 @@ class Ledger extends React.Component {
                     {txCountFailed}
                   </DetailRow>
                   <DetailRow label="max.transactions">
-                    {maxTxSetSize} per ledger
+                    {maxTxSetSize} per block
                   </DetailRow>
                 </tbody>
               </Table>
@@ -125,19 +125,19 @@ class Ledger extends React.Component {
               <Table>
                 <tbody>
                   <DetailRow label="base.fee">
-                    <FormattedNumber value={baseFee} /> stroops
+                    <FormattedNumber value={baseFee * 1e-7} /> Test-π
                   </DetailRow>
                   <DetailRow label="base.reserve">
                     {baseInStroops
                       ? stroopsToLumens(baseReserve)
                       : Number(baseReserve)}{' '}
-                    XLM
+                    Test-π
                   </DetailRow>
                   <DetailRow label="fee.pool">
-                    <FormattedNumber value={feePool} /> XLM
+                    <FormattedNumber value={feePool} /> Test-π
                   </DetailRow>
                   <DetailRow label="total.coins">
-                    <FormattedNumber value={totalCoins} /> XLM
+                    <FormattedNumber value={totalCoins} /> Test-π
                   </DetailRow>
                   <DetailRow label="protocolVersion">{protocol}</DetailRow>
                 </tbody>

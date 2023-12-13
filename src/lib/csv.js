@@ -47,7 +47,7 @@ const exportCSV = records => {
   const autoByteOrderMark = true
   saveAs(
     new Blob(['\ufeff', csvData], {type: 'text/csv;charset=utf-8'}),
-    'stellar-export.csv',
+    'pi-blockexplorer-export.csv',
     autoByteOrderMark
   )
 }

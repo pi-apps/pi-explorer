@@ -3,6 +3,7 @@ import {
   base64Decode,
   formatAmount,
   isDefInt,
+  shortAddress,
   shortHash,
 } from '../utils'
 
@@ -33,6 +34,19 @@ it('isDefInt checks for defined int correctly', () => {
 
   expect(isDefInt({x: 1}, 'x')).toBe(true)
   expect(isDefInt({x: 12345678901234567890}, 'x')).toBe(true)
+})
+
+it('shortAddress shortens address', () => {
+  expect(
+    shortAddress(
+      'GDZ464OWNGEL4X2DE6JPLEARO2WJ4AGCBN3XM7E4ZSLPHRBV6AZB6CER'
+    )
+  ).toBe('GDZ4')
+  expect(
+    shortAddress(
+      'MDZ464OWNGEL4X2DE6JPLEARO2WJ4AGCBN3XM7E4ZSLPHRBV6AZB6AAAAAAAAAAAAGW4M'
+    )
+  ).toBe('MDZ4')
 })
 
 it('shortHash shortens hash', () => {

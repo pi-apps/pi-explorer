@@ -9,6 +9,8 @@ import truncate from 'lodash/truncate'
 // formatAmount().
 BigNumber.config({EXPONENTIAL_AT: 20})
 
+const shortAddress = (address, length = 4) => address.substring(0, length)
+
 const shortHash = (hash, length = 10) => truncate(hash, {length})
 
 const isDefInt = (obj, key) => {
@@ -66,7 +68,7 @@ const formatAmount = amount => {
   return new BigNumber(amount).toString()
 }
 
-const setTitle = subTitle => (document.title = `Stellar Explorer | ${subTitle}`)
+const setTitle = subTitle => (document.title = `Pi Blockexplorer | ${subTitle}`)
 
 export {
   assetKeyToIssuer,
@@ -76,6 +78,7 @@ export {
   handleFetchDataFailure,
   isDefInt,
   setTitle,
+  shortAddress,
   shortHash,
   storageInit,
 }

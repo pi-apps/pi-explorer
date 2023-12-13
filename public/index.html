@@ -6,15 +6,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon-32x32.png" sizes="32x32"/>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link
       rel="search"
       href="%PUBLIC_URL%/search.xml"
-      title="Stellar Explorer"
+      title="Pi Blockexplorer"
       type="application/opensearchdescription+xml"
     />
-    <title>Stellar Explorer</title>
+    <title>Pi Blockexplorer</title>
 
     <style type="text/css">
       body {
@@ -30,47 +31,6 @@
         margin-top: 20%;
       }
     </style>
-
-    <script type="text/javascript">
-      var _paq = _paq || []
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(["trackPageView"])
-      _paq.push(["enableLinkTracking"])
-      ;(function() {
-        var u = "//matomo.steexp.com/"
-        _paq.push(["setTrackerUrl", u + "piwik.php"])
-        _paq.push(["setSiteId", "1"])
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0]
-        g.type = "text/javascript"
-        g.async = true
-        g.defer = true
-        g.src = u + "piwik.js"
-        s.parentNode.insertBefore(g, s)
-      })()
-
-      /* track route changes */
-      ;(function(history) {
-        var pushState = history.pushState
-        history.pushState = function(state) {
-          if (typeof history.onpushstate == "function") {
-            history.onpushstate({ state: state })
-          }
-          var pushedUrl = arguments[2]
-          _paq.push(["setCustomUrl", pushedUrl])
-          _paq.push(["trackPageView"])
-          return pushState.apply(history, arguments)
-        }
-      })(window.history)
-
-      /* track hash changes - mostly tab clicks */
-      window.addEventListener("hashchange", function() {
-        var hashUrl = "/account/" + window.location.hash.substr(1)
-        _paq.push(["setCustomUrl", hashUrl])
-        _paq.push(["trackPageView"])
-      })
-    </script>
   </head>
 
   <body>
@@ -88,5 +48,6 @@
       }, 100)
     </script>
     <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fb352560547d4b2192cb3dbf4d174a08"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

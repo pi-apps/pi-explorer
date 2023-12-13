@@ -1,16 +1,16 @@
 import React from 'react'
 import Nav from 'react-bootstrap/lib/Nav'
 import Navbar from 'react-bootstrap/lib/Navbar'
-import NavDropdown from 'react-bootstrap/lib/NavDropdown'
+// import NavDropdown from 'react-bootstrap/lib/NavDropdown'
 import NavItem from 'react-bootstrap/lib/NavItem'
-import MenuItem from 'react-bootstrap/lib/MenuItem'
+// import MenuItem from 'react-bootstrap/lib/MenuItem'
 import {Link} from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
 import {FormattedMessage, injectIntl} from 'react-intl'
 
 import LanguageSelector from './LanguageSelector'
 import NetworkSelector from './NetworkSelector'
-import logoImg from '../../img/logo.png'
+import logoImg from '../../img/logo.svg'
 
 class Header extends React.Component {
   render() {
@@ -25,7 +25,8 @@ class Header extends React.Component {
                 className="App-logo"
                 alt={formatMessage({id: 'logo'})}
               />
-              <span className="brand-text">explorer</span>
+              <span className="pi-text"> Pi </span>
+              <span className="brand-text">blockexplorer</span>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -49,24 +50,28 @@ class Header extends React.Component {
             {/* <LinkContainer to="/graphs">
               <NavItem>Graphs (beta)</NavItem>
             </LinkContainer> */}
-            <LinkContainer to="/operations">
+            {/* <LinkContainer to="/operations">
               <NavItem>
                 <FormattedMessage id="operations" />
               </NavItem>
-            </LinkContainer>
+            </LinkContainer> */}
+            <LinkContainer to="/payments">
+                <NavItem>
+                  <FormattedMessage id="payments" />
+                </NavItem>
+              </LinkContainer>
             <LinkContainer to="/txs">
               <NavItem>
                 <FormattedMessage id="transactions" />
               </NavItem>
             </LinkContainer>
-            <LinkContainer to="/ledgers">
+            <LinkContainer to="/blocks">
               <NavItem>
                 <FormattedMessage id="ledgers" />
               </NavItem>
             </LinkContainer>
 
-            <li className="divider-vertical" />
-
+            {/* <li className="divider-vertical" />
             <LinkContainer to="/assets">
               <MenuItem>
                 <FormattedMessage id="assets" />
@@ -82,7 +87,6 @@ class Header extends React.Component {
                 <FormattedMessage id="exchanges" />
               </MenuItem>
             </LinkContainer>
-
             <li className="divider-vertical" />
 
             <NavDropdown
@@ -105,7 +109,7 @@ class Header extends React.Component {
                   <FormattedMessage id="trades" />
                 </MenuItem>
               </LinkContainer>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

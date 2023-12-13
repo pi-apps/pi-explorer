@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import {shortAddress} from '../../lib/utils'
+
 import AccountLink from '../shared/AccountLink'
 import JSONButton from '../shared/JSONButton'
 import TimeSynchronisedFormattedRelative from '../shared/TimeSynchronizedFormattedRelative'
@@ -52,12 +54,24 @@ const SubOperation = ({op}) => {
   return <SubOpComponent {...op} />
 }
 
-const Operation = ({compact, op, opURLFn, parentRenderTimestamp}) => {
+const Operation = ({compact, op, opURLFn, parentRenderTimestamp, is_transaction}) => {
+  let opAccount
+  
+  if (op.fromMuxed) {
+    opAccount = op.fromMuxed
+  } else if (op.from) {
+    opAccount = op.from
+  } else if (op.sourceAccountMuxed) {
+    opAccount = op.sourceAccountMuxed
+  } else {
+    opAccount = op.sourceAccount
+  }
+
   const acc =
     op.type !== 'account_merge' ? (
-      <AccountLink account={op.sourceAccount} />
+      <AccountLink account={opAccount} />
     ) : (
-      <span title={op.sourceAccount}>{op.sourceAccount.substring(0, 4)}</span>
+      <span title={opAccount}>{shortAddress(opAccount)}</span>
     )
 
   return (
@@ -65,32 +79,35 @@ const Operation = ({compact, op, opURLFn, parentRenderTimestamp}) => {
       <td className="account-badge">{acc}</td>
       <td>
         <SubOperation op={op} />
+
       </td>
       {compact === false && (
-        <td>
+        <td class = "block-column">
           <TransactionHash hash={op.transactionHash} compact={true} />
         </td>
       )}
       {compact === false && (
-        <td>
+        <td class = "block-column">
           <OperationType
-            account={op.sourceAccount}
             type={op.type}
             compact={false}
           />
         </td>
       )}
-      <td>
+      <td > 
         <span title={op.time}>
           <TimeSynchronisedFormattedRelative
-            initialNow={parentRenderTimestamp}
-            value={op.time}
+            // initialNow={parentRenderTimestamp}
+            time={op.time}
+            hash={op.transactionHash}
           />
         </span>
       </td>
-      <td>
-        <JSONButton url={opURLFn(op.id)} />
-      </td>
+      {is_transaction === true &&(
+        <td class>
+          <JSONButton url={opURLFn(op.id)} />
+        </td>
+      )}
     </tr>
   )
 }
@@ -110,6 +127,7 @@ Operation.propTypes = {
   }).isRequired,
   opURLFn: PropTypes.func.isRequired,
   parentRenderTimestamp: PropTypes.number,
+  is_transaction: PropTypes.bool,
 }
 
 export {Operation as default, opTypes}

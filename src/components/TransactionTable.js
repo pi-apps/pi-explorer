@@ -16,7 +16,7 @@ class TransactionRow extends React.Component {
       hash,
       sourceAccount,
       ledger,
-      parentRenderTimestamp,
+      // parentRenderTimestamp,
       opCount,
       showLedger,
       showSource,
@@ -34,7 +34,7 @@ class TransactionRow extends React.Component {
         )}
         {showLedger === true && (
           <td>
-            <Link to={`/ledger/${ledger}`}>{ledger}</Link>
+            <Link to={`/block/${ledger}`}>{ledger}</Link>
           </td>
         )}
         <td>
@@ -43,8 +43,9 @@ class TransactionRow extends React.Component {
         <td>
           <span title={time}>
             <TimeSynchronisedFormattedRelative
-              initialNow={parentRenderTimestamp}
-              value={time}
+              // initialNow={parentRenderTimestamp}
+              time={time}
+              hash={hash}
             />
           </span>
         </td>

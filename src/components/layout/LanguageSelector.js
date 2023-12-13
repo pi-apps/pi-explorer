@@ -6,7 +6,7 @@ import langSelectImg from '../../img/lang-select.png'
 
 const onClickTranslateHelp = () => {
   window.location.href =
-    'https://github.com/chatch/stellarexplorer/tree/master/src/languages'
+    'https://github.com/pi-apps/pi-explorer/tree/master/src/languages'
 }
 
 const styleLanguageSelector = {
@@ -32,14 +32,44 @@ const LanguageSelector = ({
       <MenuItem lang="en" onClick={switcher}>
         English
       </MenuItem>
-      <MenuItem lang="zh" onClick={switcher}>
-        中文
+      <MenuItem lang="zh-Hans" onClick={switcher}>
+        中文 (简体)
+      </MenuItem>
+      <MenuItem lang="zh-Hant" onClick={switcher}>
+        中文 (繁體)
       </MenuItem>
       <MenuItem lang="ru" onClick={switcher}>
         Pусский
       </MenuItem>
       <MenuItem lang="vi" onClick={switcher}>
         Tiếng Việt
+      </MenuItem>
+      <MenuItem lang="fr" onClick={switcher}>
+        Français
+      </MenuItem>
+      <MenuItem lang="ur" onClick={switcher}>
+        اردو
+      </MenuItem>
+      <MenuItem lang="hi" onClick={switcher}>
+        हिन्दी
+      </MenuItem>
+      <MenuItem lang="ja" onClick={switcher}>
+        日本語
+      </MenuItem>
+      <MenuItem lang="id" onClick={switcher}>
+        Bahasa Indonesia
+      </MenuItem>
+      <MenuItem lang="ha" onClick={switcher}>
+        Hausa
+      </MenuItem>
+      <MenuItem lang="it" onClick={switcher}>
+        Italiana
+      </MenuItem>
+      <MenuItem lang="ne" onClick={switcher}>
+        नेपाली
+      </MenuItem>
+      <MenuItem lang="pt" onClick={switcher}>
+        Português
       </MenuItem>
       <MenuItem
         onClick={onClickTranslateHelp}

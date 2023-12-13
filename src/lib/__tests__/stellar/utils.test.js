@@ -1,6 +1,7 @@
 import {
+  isFederatedAddress,
+  isMuxedAddress,
   isPublicKey,
-  isStellarAddress,
   isTxHash,
   stroopsToLumens,
 } from '../../stellar/utils'
@@ -32,16 +33,16 @@ it('isPublicKey identifies a valid key', () => {
   ).toBe(true)
 })
 
-it('isStellarAddress identifies a valid stellar address', () => {
-  expect(isStellarAddress()).toBe(false)
-  expect(isStellarAddress('')).toBe(false)
-  expect(isStellarAddress(null)).toBe(false)
+it('isFederatedAddress identifies a valid stellar address', () => {
+  expect(isFederatedAddress()).toBe(false)
+  expect(isFederatedAddress('')).toBe(false)
+  expect(isFederatedAddress(null)).toBe(false)
 
-  expect(isStellarAddress('comma,forbidden*stellar.org')).toBe(false)
-  expect(isStellarAddress('two*asterisk*stellar.org')).toBe(false)
+  expect(isFederatedAddress('comma,forbidden*stellar.org')).toBe(false)
+  expect(isFederatedAddress('two*asterisk*stellar.org')).toBe(false)
 
-  expect(isStellarAddress('jed*stellar.org')).toBe(true)
-  expect(isStellarAddress('hatch1234*some-domain-888.a.b.c')).toBe(true)
+  expect(isFederatedAddress('jed*stellar.org')).toBe(true)
+  expect(isFederatedAddress('hatch1234*some-domain-888.a.b.c')).toBe(true)
 })
 
 it('isTxHash identifies a valid transaction hash', () => {
@@ -54,3 +55,25 @@ it('isTxHash identifies a valid transaction hash', () => {
     isTxHash('ddeff3d3b8455f8173ef4d63e6650625734207fd351d2b9eeeaf0e38ffe1064b')
   ).toBe(true)
 })
+
+it('isMuxedAddress identifies a valid key', () => {
+  expect(isMuxedAddress()).toBe(false)
+  expect(isMuxedAddress('')).toBe(false)
+  expect(isMuxedAddress(null)).toBe(false)
+
+  // same length as valid key and looks valid but is not
+  expect(
+    isMuxedAddress('MDZ464OWNGEL4X2DE6JPLEARO2WJ4AGCBN3XM7E4ZSLPHRBV6AZB6AAAAAAAAAAAAGW4MX')
+  ).toBe(false)
+
+  // valid public key is not a valid mutex address
+  expect(
+    isMuxedAddress('GBQHXMAVPD3AKY5PWFCBVT3NFIXGE345FVZLL4JXKTVSFT5FKMEV5QIX')
+  ).toBe(false)
+
+  // valid
+  expect(
+    isMuxedAddress('MDZ464OWNGEL4X2DE6JPLEARO2WJ4AGCBN3XM7E4ZSLPHRBV6AZB6AAAAAAAAAAAAGW4M')
+  ).toBe(true)
+})
+

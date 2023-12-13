@@ -5,9 +5,10 @@ import toNumber from 'lodash/toNumber'
 import {sdk} from './stellar'
 
 import {
+  isFederatedAddress,
+  isMuxedAddress,
   isPublicKey,
   isSecretKey,
-  isStellarAddress,
   isTxHash,
 } from './stellar/utils'
 import directory from '../data/directory'
@@ -39,12 +40,12 @@ const searchStrToPath = searchStr => {
 
   const str = searchStr.trim()
 
-  if (isPublicKey(str) || isStellarAddress(str)) {
+  if (isPublicKey(str) || isFederatedAddress(str) || isMuxedAddress(str)) {
     return `/account/${str}`
   } else if (isTxHash(str)) {
     return `/tx/${str}`
   } else if (!isNaN(toNumber(str))) {
-    return `/ledger/${toNumber(str)}`
+    return `/block/${toNumber(str)}`
   } else if (isSecretKey(str)) {
     const kp = sdk.Keypair.fromSecret(str)
     return `/account/${kp.publicKey()}`

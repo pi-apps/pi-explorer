@@ -6,7 +6,7 @@ const filterFor = (type) => {
   window.location.href = window.location.pathname + '?opTypeFilter=' + type + window.location.hash
 }
 
-const OperationType = ({account, type, compact = true}) => {
+const OperationType = ({type, compact = true}) => {
   const hashLabel = compact ? shortHash(type) : type
   const className = !compact ? 'monospace' : ''
   const fn = (event) => {
