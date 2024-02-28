@@ -40,7 +40,7 @@ Build:
 npm i && npm run build
 ```
 
-## Languages
+## Languages farsi
 
 Use the language selector in the top right corner to change the language.
 
