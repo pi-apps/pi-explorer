@@ -1,4 +1,4 @@
-# Pi Explorer
+https://github.com/blmitrov/Pi/issues/1# Pi Explorer
 
 A block explorer for the [Pi Blockchain](https://minepi.com) based on Chris Hatch' repository.
 
