@@ -48,4 +48,31 @@ Translation files are here:
 https://github.com/pi-apps/pi-explorer/tree/master/src/languages
 
 Submit pull requests with new languages or languages fixes if you like.
+import os
 
+from lightning.app import _PROJECT_ROOT
+from lightning.app.testing import application_testing, LightningTestApp
+from lightning.app.utilities.enum import AppStage
+
+
+class TestLightningAppInt(TestLightningApp):
+    def run_once(self) -> bool:
+        if self.root.counter > 1:
+            print("V0 App End")
+            self.stage = AppStage.STOPPING
+            return True
+        return super().run_once()
+
+
+def test_v0_app_example():
+    command_line = [
+        os.path.join(_PROJECT_ROOT, "examples/app_v0/app.py"),
+        "--blocking",
+        "False",
+        "--multiprocess",
+        "--open-ui",
+        "False",
+    ]
+    result = application_testing(TestLightningAppInt, command_line)
+    assert "V0 App End" in str(result.stdout_bytes)
+    assert result.exit_code == 0
