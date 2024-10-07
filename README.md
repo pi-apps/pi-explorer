@@ -1,4 +1,4 @@
-# Pi Explorer
+https://fireside.pinet.com/posts/663b2118441f6e09488c3c7fhttps://github.com/pi-apps/pi-explorer/commit/edf6ad486fd36f762c7e4cf83b410cca060d57bd#commitcomment-147561305# Pi Explorer
 
 A block explorer for the [Pi Blockchain](https://minepi.com) based on Chris Hatch' repository.
 
