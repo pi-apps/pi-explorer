@@ -38,6 +38,9 @@ const LanguageSelector = ({
       <MenuItem lang="zh-Hant" onClick={switcher}>
         中文 (繁體)
       </MenuItem>
+      <MenuItem lang="ko" onClick={switcher}>
+        한글
+      </MenuItem>
       <MenuItem lang="ru" onClick={switcher}>
         Pусский
       </MenuItem>
