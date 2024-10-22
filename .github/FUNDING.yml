@@ -1,0 +1,13 @@
+# Это поддерживаемые платформы модели финансирования
+
+github: # Замените до 4 имен пользователей с поддержкой GitHub Sponsors, например, [user1, user2]
+patreon: # Заменить одним именем пользователя Patreon
+open_collective: # Заменить одним именем пользователя Open Collective
+ko_fi: # Заменить одним именем пользователя Ko-fi
+tidelift: # Замените одним именем платформы Tidelift / именем пакета, например, npm / babel
+community_bridge: # Замените одним именем проекта Community Bridge, например, cloud-foundry
+liberapay: # Заменить на одно имя пользователя Liberapay
+issuehunt: # Заменить одним именем пользователя IssueHunt
+otechie: # Заменить одним именем пользователя Otechie
+lfx_crowdfunding: # Замените одним названием краудфандингового проекта LFX, например, cloud-foundry
+custom: # Замените до 4 пользовательских спонсорских URL-адресов, например, ['link1', 'link2']
