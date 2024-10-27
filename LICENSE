@@ -1,4 +1,8 @@
-                                 Apache License
+    Column1	Column2	Column3	Column4	Column5	Column6	Column7	Column8	Column9	Column10
+
+id	transactionSuccessful	sourceAccount	type	typeI	createdAt	transactionHash	startingBalance	funder	account
+
+                             Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
