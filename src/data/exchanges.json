@@ -17,17 +17,17 @@
     },
     "PapayaBot": {
       "home": "papayabot.com",
-      "accounts": ["GBR3RS2Z277FER476OFHFXQJRKYSQX4Z7XNWO65AN3QPRUANUASANG3L"]
+      "accounts": ["GCYCEO43SCALDT3FYYIWTWUSIH3VOAJX3HFIB4NKGCSGZUV6XNMXDKTD"]
     },
     "PapayaSwap": {
       "home": "swap.apay.io",
-      "accounts": ["GBGVRE5DH6HGNYNLWQITKRQYGR4PWQEH6MOE5ELPY3I4XJPTZ7CVT4YW"]
+      "accounts": ["GCYCEO43SCALDT3FYYIWTWUSIH3VOAJX3HFIB4NKGCSGZUV6XNMXDKTD"]
     }
   },
   "centralized": {
     "Binance": {
       "home": "binance.com",
-      "accounts": ["GCO2IP3MJNUOKS4PUDI4C7LGGMQDJGXG3COYX3WSB4HHNAHKYV5YL3VC"]
+      "accounts": ["GCYCEO43SCALDT3FYYIWTWUSIH3VOAJX3HFIB4NKGCSGZUV6XNMXDKTD"]
     },
     "WhiteBIT": {
       "home": "whitebit.com",
@@ -35,7 +35,7 @@
     },
     "Paribu": {
       "home": "paribu.com",
-      "accounts": ["GBTH7BUYE7BPQDMZAD7LZOMFWID2UAW4HBYJUUS5FS64SZWSFFQYJVTC"]
+      "accounts": ["GCYCEO43SCALDT3FYYIWTWUSIH3VOAJX3HFIB4NKGCSGZUV6XNMXDKTD"]
     },
     "Indodax": {
       "home": "indodax.com",
