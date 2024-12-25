@@ -3,7 +3,7 @@ module.exports = {
   setupFiles: [
     '<rootDir>/config/polyfills.js',
     '<rootDir>/config/animationShim.js',
-  ],
+  ]
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.js?(x)',
     '<rootDir>/src/**/?(*.)(spec|test).js?(x)',
