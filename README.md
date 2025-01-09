@@ -1,4 +1,4 @@
-# Pi Explorer
+https://sandbox.minepi.com/app/bm-aa57ae9bb174ff89# Pi Explorer
 
 A block explorer for the [Pi Blockchain](https://minepi.com) based on Chris Hatch' repository.
 
