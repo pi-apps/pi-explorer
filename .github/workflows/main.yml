@@ -1,0 +1,71 @@
+{
+    "_links": {
+        "self": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G"
+        },
+        "transactions": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/transactions{?cursor,limit,order}",
+            "templated": true
+        },
+        "operations": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/operations{?cursor,limit,order}",
+            "templated": true
+        },
+        "payments": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/payments{?cursor,limit,order}",
+            "templated": true
+        },
+        "effects": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/effects{?cursor,limit,order}",
+            "templated": true
+        },
+        "offers": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/offers{?cursor,limit,order}",
+            "templated": true
+        },
+        "trades": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/trades{?cursor,limit,order}",
+            "templated": true
+        },
+        "data": {
+            "href": "https://api.mainnet.minepi.com/accounts/GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G/data/{key}",
+            "templated": true
+        }
+    },
+    "id": "GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G",
+    "account_id": "GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G",
+    "sequence": "14441973562352634",
+    "subentry_count": 0,
+    "last_modified_ledger": 18480616,
+    "last_modified_time": "2024-12-30T17:14:40Z",
+    "thresholds": {
+        "low_threshold": 0,
+        "med_threshold": 0,
+        "high_threshold": 0
+    },
+    "flags": {
+        "auth_required": false,
+        "auth_revocable": false,
+        "auth_immutable": false,
+        "auth_clawback_enabled": false
+    },
+    "balances": [
+        {
+            "balance": "99863158.9507021",
+            "buying_liabilities": "0.0000000",
+            "selling_liabilities": "0.0000000",
+            "asset_type": "native"
+        }
+    ],
+    "signers": [
+        {
+            "weight": 1,
+            "key": "GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G",
+            "type": "ed25519_public_key"
+        }
+    ],
+    "data": {},
+    "num_sponsoring": 20950356,
+    "num_sponsored": 0,
+    "paging_token": "GABT7EMPGNCQSZM22DIYC4FNKHUVJTXITUF6Y5HNIWPU4GA7BHT4GC5G"
+}
