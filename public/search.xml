@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-  <ShortName>Stellar Explorer</ShortName>
-  <Description>Ledger explorer for the Stellar Network</Description>
+  <ShortName>Blockexplorer</ShortName>
+  <Description>Blockexplorer for the Pi Network</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/png">https://steexp.com/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://steexp.com/search/{searchTerms}" />
+  <Image width="32" height="32" type="image/png">https://minepi.com/blockexplorer/favicon-32x32.png</Image>
+  <Url type="text/html" method="get" template="https://minepi.com/blockexplorer/search/{searchTerms}" />
   <Url
     type="application/opensearchdescription+xml"
     rel="self"

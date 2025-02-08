@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>
-			https://steexp.com/
+			https://minepi.com/blockexplorer
+		</loc>
+	</url>
+	<!-- <url>
+		<loc>
+			https://minepi.com/blockexplorer/operations
+		</loc>
+	</url> -->
+	<url>
+		<loc>
+			https://minepi.com/blockexplorer/blocks
 		</loc>
 	</url>
 	<url>
 		<loc>
-			https://steexp.com/operations
+			https://minepi.com/blockexplorer/txs
+		</loc>
+	</url>
+	<!-- <url>
+		<loc>
+			https://minepi.com/blockexplorer/exchanges
 		</loc>
 	</url>
 	<url>
 		<loc>
-			https://steexp.com/ledgers
-		</loc>
-	</url>
-	<url>
-		<loc>
-			https://steexp.com/txs
-		</loc>
-	</url>
-	<url>
-		<loc>
-			https://steexp.com/exchanges
-		</loc>
-	</url>
-	<url>
-		<loc>
-			https://steexp.com/assets
+			https://minepi.com/blockexplorer/assets
 		</loc>
 	</url>
 	<url>
 		<loc>
 			https://steexp.com/anchors
 		</loc>
-	</url>
+	</url> -->
 	<url>
 		<loc>
-			https://steexp.com/payments
+			https://minepi.com/blockexplorer/payments
 		</loc>
 	</url>
-	<url>
+	<!-- <url>
 		<loc>
 			https://steexp.com/effects
 		</loc>
@@ -49,5 +49,5 @@
 		<loc>
 			https://steexp.com/trades
 		</loc>
-	</url>
+	</url> -->
 </urlset>

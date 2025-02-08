@@ -4,8 +4,8 @@
   "version": "1.4.0",
   "license": "Apache-2.0",
   "author": "Chris Hatch <hatch@tuta.io>",
-  "homepage": "https://minepi.com/blockexplorer",
   "repository": "pi-apps/pi-explorer",
+  "homepage": "https://minepi.com/blockexplorer",
   "bugs": {
     "url": "https://github.com/pi-apps/pi-explorer/issues"
   },

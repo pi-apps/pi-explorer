@@ -69,7 +69,7 @@ class Transaction extends React.Component {
                     <FormattedMessage id="fee" />
                   </td>
                   {/* <td>{fee} stroops</td> */}
-                  <td>{fee} 0.01 Test-π</td>
+                  <td>{fee * 1e-7} Test-π</td>
 
                 </tr>
                 <tr>
@@ -104,7 +104,7 @@ class Transaction extends React.Component {
             {` (${opCount})`}
           </h3>
           <Grid>
-            <OperationTable limit={opCount} tx={id} />
+            <OperationTable limit={opCount} tx={id} is_transaction={true}/>
           </Grid>
         </Row>
       </Grid>
@@ -150,7 +150,8 @@ class TransactionContainer extends React.Component {
     return (
       <TransactionIntl
         id={tx.id}
-        fee={tx.fee_paid}
+        // fee={tx.fee_paid}
+        fee={tx.fee_charged}
         ledger={tx.ledger_attr}
         memoType={tx.memo_type}
         memo={tx.memo}

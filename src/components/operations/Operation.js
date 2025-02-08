@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import {shortAddress} from '../../lib/utils'
 
 import AccountLink from '../shared/AccountLink'
-// import JSONButton from '../shared/JSONButton'
+import JSONButton from '../shared/JSONButton'
 import TimeSynchronisedFormattedRelative from '../shared/TimeSynchronizedFormattedRelative'
 import TransactionHash from '../shared/TransactionHash'
 import OperationType from '../shared/OperationType'
@@ -54,7 +54,7 @@ const SubOperation = ({op}) => {
   return <SubOpComponent {...op} />
 }
 
-const Operation = ({compact, op, opURLFn, parentRenderTimestamp}) => {
+const Operation = ({compact, op, opURLFn, parentRenderTimestamp, is_transaction}) => {
   let opAccount
   
   if (op.fromMuxed) {
@@ -103,9 +103,11 @@ const Operation = ({compact, op, opURLFn, parentRenderTimestamp}) => {
           />
         </span>
       </td>
-      {/* <td class>
-        <JSONButton url={opURLFn(op.id)} />
-      </td> */}
+      {is_transaction === true &&(
+        <td class>
+          <JSONButton url={opURLFn(op.id)} />
+        </td>
+      )}
     </tr>
   )
 }
@@ -125,6 +127,7 @@ Operation.propTypes = {
   }).isRequired,
   opURLFn: PropTypes.func.isRequired,
   parentRenderTimestamp: PropTypes.number,
+  is_transaction: PropTypes.bool,
 }
 
 export {Operation as default, opTypes}
